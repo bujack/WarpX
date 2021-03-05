@@ -65,7 +65,7 @@ We use the following modules and environments on the system.
 
    # optional: Ascent in situ support
    #   note: build WarpX with CMake
-   export Alpine=/gpfs/alpine/csc340/world-shared/software/ascent/2020-11-07/summit/cuda/gnu
+   export Alpine=/gpfs/alpine/csc340/world-shared/software/ascent/2021-3-1/summit/cuda/gnu
    export Ascent_DIR=$Alpine/ascent-install
    export Conduit_DIR=$Alpine/conduit-install
 
@@ -128,7 +128,7 @@ Then, ``cd`` into the directory ``$HOME/src/warpx`` and use the following comman
 .. code-block:: bash
 
    rm -rf build
-   cmake -S build -B build -DWarpX_OPENPMD=ON -DWarpX_DIMS=3 -DWarpX_COMPUTE=CUDA
+   cmake -S . -B build -DWarpX_OPENPMD=ON -DWarpX_DIMS=3 -DWarpX_COMPUTE=CUDA
    cmake --build build -j 10
 
 The general :ref:`cmake compile-time options <building-cmake>` apply as usual.
